@@ -16,7 +16,7 @@ setup(name='rspace',
               'rspace = rspace.main:main',
           ]
       },
-      classifiers=['Environment :: Console',P
+      classifiers=['Environment :: Console',
                    'Intended Audience :: System Administrators',
                    'License :: GPL',
                    'Natural Language :: Englih',
