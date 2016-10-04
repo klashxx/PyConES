@@ -2,7 +2,7 @@
 function  mail {
   local mail=$1
 
-  if [[ ! $mail =~ ^[A-Za-z0-9._%+-]+@cajamar.es$ ]]; then
+  if [[ ! $mail =~ ^[A-Za-z0-9._%+-]+@pycones.es$ ]]; then
      echo "Email address $mail is invalid."
     return 5
   fi
