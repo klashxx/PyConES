@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # (c) Juan Diego Godoy Robles - PyConES 2016 Almería
-set -e
 
 # CONSTANTS
 readonly VERSION="0.1"
@@ -13,10 +12,10 @@ declare -a databases
 declare -a mails
 
 source ./validation.sh
-
 source ./lib.sh
-
 source ./logger.sh
+source ./auth.sh
+source ./db.sh
 
 function setup_file_logger {
   >$LOG
@@ -140,6 +139,16 @@ function check_space {
 }
 
 
+function check_db_space {
+  for db in "${databases[@]}"; do
+    log INFO $LINENO "Info para $db"
+    avaliable_db_space $db|while read database table total;do
+      printf "%-30s %-30s %s\n" $database $table $total
+    done
+  done
+}
+
+
 function main {
 
   arguments $@
@@ -178,6 +187,8 @@ function main {
   log DEBUG $LINENO "mails: ${mails[*]}"
 
   check_space $fs $local_host $host
+
+  check_db_space
 
   exit 0
 }

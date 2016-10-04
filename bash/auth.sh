@@ -4,5 +4,4 @@ function  decode_pass {
   local fpriv=$2
 
   openssl rsautl -decrypt -inkey $fpriv -in $fpass
-
 }
