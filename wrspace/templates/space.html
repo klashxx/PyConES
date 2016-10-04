@@ -1,0 +1,31 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+
+{% extends "base.html" %}
+{% block title %}resp{% endblock %}
+{% block body %}
+
+<h1>Database server: {{ dbid }}</h1>
+<table id="t01">
+<tr><td>Database</td><td>Table</td><td>MBs</td><tr>
+{% for col in data if col.2 > 0 %}
+  {% if col.2 > 10 %}
+    <tr bgcolor="#F78181">
+  {% else %}
+    <tr>
+  {% endif %}
+      <td>{{ col.0 }}</td>
+      <td>{{ col.1 }}</td>
+      <td>{{ col.2 }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

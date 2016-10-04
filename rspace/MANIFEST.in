@@ -1,0 +1,5 @@
+include *.sh
+recursive-include rspace/docs *
+prune rspace/docs/_build
+recursive-include rspace/secret *
+recursive-include rspace/templates *
