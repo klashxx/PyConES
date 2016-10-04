@@ -7,7 +7,7 @@ set -e
 readonly VERSION="0.1"
 readonly SCRIPT=$(basename $0)
 readonly LOG=./tmp/${SCRIPT%.*}.bash.log
-declare -r -a DBCHOICES=("prod" "test" "dev")
+declare -r -a DBCHOICES=("pymysql" "dev")
 
 declare -a databases
 declare -a mails
