@@ -49,7 +49,7 @@ def arguments():
                         action='append',
                         dest='databases',
                         help='Target database/s.',
-                        choices=['prod', 'test', 'dev', 'eolo'])
+                        choices=['pymysql', 'dev'])
 
     parser.add_argument('-m', '--mails',
                         action='append',
@@ -96,22 +96,22 @@ def check_space(log, fs, local_host, remote_host):
 def check_db_space(log, dbids):
 
     for dbid in dbids:
-        db_conn = db.connect(log, dbid)
-        if db_conn is None:
-            log.critical("Can't connect to {0}".format(dbid))
+        try:
+            db_conn = db.connect(dbid)
+        except DBError as err:
+            log.critical("Can't connect to {0}: {1}".format(dbid, err))
             continue
+
         log.info('Connected to {0}'.format(dbid))
 
-        rows = db.avaliable_space(log, db_conn)
+        try:
+            rows = db.avaliable_space(db_conn)
+        except DBError as err:
+            log.critical(err)
+        else:
+            for database, table, total in rows:
+                print '{0:30s} {1:30s} {2}'.format(database, table, total)
 
-        if rows is None:
-            continue
-
-        for tablespace, free, total, percent in rows:
-            print '{0:15s} {1:6d} {2:6d} {3:-02d}%'.format(tablespace,
-                                                           free,
-                                                           total,
-                                                           percent)
     return None
 
 
