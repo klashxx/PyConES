@@ -1,0 +1,25 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+
+{% extends "base.html" %}
+{% block title %}Whost analyzer{% endblock %}
+{% block body %}
+
+<h1>Process info</h1>
+
+{% for proc in data.processes %}
+<table id="t01">
+{% for key, value in proc.items() %}
+<tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+{% endfor %}
+</table>
+{% endfor %}
+{% endblock %}

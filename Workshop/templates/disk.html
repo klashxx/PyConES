@@ -1,0 +1,33 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+
+{% extends "base.html" %}
+{% block title %}Whost analyzer{% endblock %}
+{% block body %}
+
+<h1>Disk info</h1>
+<table id="t01">
+<tr><td>Dev</td><td>Mount</td><td>Ocup</td><td>Type</td><td>Ops</td><tr>
+{% for ele in data.partitions %}
+  {% if ele.ocupation > 80 %}
+    <tr bgcolor="#F78181">
+  {% else %}
+    <tr>
+  {% endif %}
+      <td>{{ ele.device }}</td>
+      <td>{{ ele.mount }}</td>
+      <td>{{ ele.ocupation }}</td>
+      <td>{{ ele.type }}</td>
+      <td>{{ ele.opts }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,28 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+
+{% extends "base.html" %}
+{% block title %}Whost analyzer{% endblock %}
+{% block body %}
+
+<h1>Users info</h1>
+<table id="t01">
+<tr><td>Name</td><td>Terminal</td><td>Host</td><td>Started</td><tr>
+{% for ele in data.users %}
+    <tr>
+      <td>{{ ele.name }}</td>
+      <td>{{ ele.terminal }}</td>
+      <td>{{ ele.host }}</td>
+      <td>{{ ele.started }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
