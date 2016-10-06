@@ -24,9 +24,9 @@ def mail(maddress):
 
     Examples:
         >>> from rspace.common.validation import mail
-        >>> mail('jdiego_godoy@cajamar.es')
-        'jdiego_godoy@cajamar.es'
-        >>> mail('jdiego_godoy@cajamar')
+        >>> mail('jdiego_godoy@pycones.es')
+        'jdiego_godoy@pycones.es'
+        >>> mail('jdiego_godoy@pycones')
         rspace.common.exceptions.ParamError: Email address is invalid.
     """
 
