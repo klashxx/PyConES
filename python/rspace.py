@@ -21,7 +21,7 @@ import validation
 import logger
 import db
 from lib import avaliable_space, df
-from custom_exceptions import ParamError
+from custom_exceptions import ParamError, DBError
 
 LOG = './tmp/{0}.python.log'.format(os.path.splitext(
     os.path.basename(sys.argv[0]))[0])
