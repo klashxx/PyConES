@@ -51,7 +51,7 @@ Y si aún tenemos más ganas (y tiempo :stuck_out_tongue_winking_eye:), comentar
 - `Docstrings` + `Sphinx`
 - Reusabilidad (`__name__ == “__main__"`).
 - Distribución y packaging (`setup.py`).
-- Webapp (`Flask`)
+- Webapp (`Flask` + `Jinja2` *templates*)
 
 ### Contacta conmigo
 
