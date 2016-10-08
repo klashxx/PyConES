@@ -19,10 +19,12 @@ import platform
 
 import validation
 import logger
+import settings
 import db
 from lib import avaliable_space, df
 from custom_exceptions import ParamError, DBError
 
+IDLOG = 'rspace'
 LOG = './tmp/{0}.python.log'.format(os.path.splitext(
     os.path.basename(sys.argv[0]))[0])
 
@@ -121,7 +123,8 @@ def main():
     if args.mails is None:
         args.mails = ['pyconesal@gmail.com']
 
-    log = logger.setup_logger('rspace', LOG)
+    log = logger.setup_logger(IDLOG, LOG)
+    settings.log = log
     local_host = socket.gethostname()
 
     log.info('Parameter validation ok')
