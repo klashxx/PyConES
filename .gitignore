@@ -80,10 +80,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
-<<<<<<< HEAD
 .venv/
-=======
->>>>>>> e7a50fd77d6c4fcfdc98c282adfd04598a49842d
 venv/
 ENV/
 
@@ -92,7 +89,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
-<<<<<<< HEAD
 
 # Sublime proyect files
 *sublime*
@@ -100,6 +96,3 @@ ENV/
 # sphinx docs
 _*/
 html/
-
-=======
->>>>>>> e7a50fd77d6c4fcfdc98c282adfd04598a49842d
