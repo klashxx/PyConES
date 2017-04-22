@@ -57,14 +57,14 @@ Y si aún tenemos más ganas (y tiempo :stuck_out_tongue_winking_eye:), comentar
 
 Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te cortes ... :godmode:
 
-<center><h6 align="center">
-[![][pycones-img]][pycones-url]
-<br>*Made with* :heart: *in* [*Almería*](https://www.google.com/search?q=almeria&espv=2&biw=1217&bih=585&sa=X#tbm=isch&q=almeria+movies)*, Spain.*
-</h6></center>
+<h6 align="center">
+<a href="http://2016.es.pycon.org/es/schedule/python-o-como-mejorar-la-vida-de-un-administrador/">
+  <img src="https://github.com/klashxx/PyConES/blob/master/rspace/rspace/docs/images/pycones.jpg">
+</a></h6>
+<br>
+<h6 align="center">
+Made with :heart: in <a href="https://www.google.com/search?q=almeria&espv=2&biw=1217&bih=585&sa=X#tbm=isch&q=almeria+movies">Almería</a>, Spain.</h6>
 
 
 [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT
-
-[pycones-img]: https://github.com/klashxx/PyConES/blob/master/rspace/rspace/docs/images/pycones.jpg
-[pycones-url]: http://2016.es.pycon.org/es/schedule/python-o-como-mejorar-la-vida-de-un-administrador/
