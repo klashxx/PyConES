@@ -53,6 +53,10 @@ Y si aún tenemos más ganas (y tiempo :stuck_out_tongue_winking_eye:), comentar
 - Distribución y packaging (`setup.py`).
 - Webapp (`Flask` + `Jinja2` *templates*)
 
+#### Vídeo de la charla
+
+[![Python o como mejorar la vida de un administrador de sistemas](https://raw.githubusercontent.com/klashxx/PyConES/master/python-sysadmin-small.png)](https://youtu.be/gFa0gGXPQG4)
+
 ### Contacta conmigo
 
 Mis perfiles online están [**aquí**](https://klashxx.github.io/about), no te cortes ... :godmode:
