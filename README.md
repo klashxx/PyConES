@@ -1,19 +1,19 @@
 ## :snake: Python o como mejorar la vida de un administrador de sistemas
 [![][license-svg]][license-url]
 
-Código base que ilustrará la charla [_Python o como mejorar la vida de un administrador de sistemas_](http://2016.es.pycon.org/es/schedule/python-o-como-mejorar-la-vida-de-un-administrador/) en la [PyConES Almería 2016](http://2016.es.pycon.org/).
+Código base que ilustró la charla [_Python o como mejorar la vida de un administrador de sistemas_](http://2016.es.pycon.org/es/schedule/python-o-como-mejorar-la-vida-de-un-administrador/) impartida en la [PyConES Almería 2016](http://2016.es.pycon.org/).
 
-### ¿Sobre que hablaremos?
+### ¿Sobre qué se habló?
 
-Compararemos dos aplicaciones *gemelas* escritas en `Bash` y `Python` cuyo código está contenido en este mismo `repo`.
+Comparamos dos aplicaciones *gemelas* escritas en `Bash` y `Python` cuyo código está contenido en este mismo `repo`.
 
 Las funcionalidades de estas utilidades *demo* son:
 
 - [x] Consultar el espacio disponible en un `FS` (local o remoto)
 - [x] Consultar es las tablas mas *pesadas* de un servidor `mysql` (local o remoto)
-- [ ] Enviar un informe vía mail.
+- [x] Reporting `HTML`.
 
-Prestaremos atención especial a los siguientes puntos:
+Con atención especial a los siguientes puntos:
 
 #### Toma de argumentos
 
@@ -37,7 +37,7 @@ Prestaremos atención especial a los siguientes puntos:
 
 #### Llamadas externas
 
-- Gestion del interfaces.
+- Gestión del interfaces.
 - raw ssh vs paramiko
 - Flexibilidad (raise).
 
@@ -45,7 +45,7 @@ Prestaremos atención especial a los siguientes puntos:
 
 - `HERE-DOCS` vs Python `driver`
 
-Y si aún tenemos más ganas (y tiempo :stuck_out_tongue_winking_eye:), comentaremos alguno de los :snake: *superpowers*, gracias a sus extraordinarias *Batteries included*:
+#### Y otros trucos ...
 
 - Gestión de archivos de configuración.
 - `Docstrings` + `Sphinx`
